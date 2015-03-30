@@ -1,0 +1,16 @@
+div(class="container starter-form")
+	div(class="row")
+		div(class="col-md-12")
+			h2 Base64 Encode
+			form(method="post", action="convert.php", enctype="multipart/form-data", class="form-horizontal")
+				div(class="form-group")
+					label(for="user-file", class="control-label") File Upload
+					input(type="file", name="upfile", id="user-file")
+				div(class="form-group has-feedback")
+					label(for="user-url-file", class="control-label") File Url Upload
+					div(class="input-group")
+						span(class="input-group-addon") url:
+						input(type="text", name="file_url", id="user-url-file", class="form-control")
+
+				div(class="form-group")
+					input(type="submit", value="Invia x la Codifica", class="btn btn-primary btn-lg")

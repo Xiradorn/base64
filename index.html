@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Sir Xiradorn">
+    <meta name="description" content="Base 64 File Encoder">
+    <title>Base64 Converter </title>
+    <!-- Style section -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <!--link(rel="stylesheet", type="text/css", href="css/assets/bootstrap-theme.min.css")-->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Base64 Encoder</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container starter-form">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Base64 Encode</h2>
+          <form method="post" action="convert.php" enctype="multipart/form-data" class="form-horizontal">
+            <div class="form-group">
+              <label for="user-file" class="control-label">File Upload</label>
+              <input type="file" name="upfile" id="user-file">
+            </div>
+            <div class="form-group has-feedback">
+              <label for="user-url-file" class="control-label">File Url Upload</label>
+              <div class="input-group"><span class="input-group-addon">url:</span>
+                <input type="text" name="file_url" id="user-url-file" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Invia x la Codifica" class="btn btn-primary btn-lg">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Js section-->
+    <script src="assets/js/jquery/jquery.min.js"></script>
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+  </body>
+</html>
