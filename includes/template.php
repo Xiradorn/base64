@@ -22,7 +22,7 @@ echo <<<EOL
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" data-toggle="collapse" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Base64 Encoder</a>
+          <button type="button" data-toggle="collapse" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="./" class="navbar-brand">Base64 Encoder</a>
         </div>
       </div>
     </nav>
@@ -35,7 +35,7 @@ echo <<<EOL
 			MD5: <code>{ {$hash['md5']} }</code><br>
 			SHA1: <code>{ {$hash['sha1']} }</code><br><br>
 			
-			<a href="http://localhost/base64" class="btn btn-success">Home</a>
+			<a href="./" class="btn btn-success">Home</a>
 			
 			<!-- Button trigger modal -->
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
