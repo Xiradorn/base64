@@ -48,6 +48,11 @@ echo <<<EOL
         </div>
       </div>
     </div>
+	<div id="footer">
+      <div class="container">
+        <p class="muted credit">Copyright by <a href="http://martinbean.co.uk">Sir Xiradorn</a></p>
+      </div>
+    </div>
 	
 	<!-- Modal -->
 			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
