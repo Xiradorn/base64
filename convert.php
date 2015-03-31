@@ -10,6 +10,7 @@ define("INCLUDES", "includes/");
 
 /* Inlusione funzioni */
 include_once(INCLUDES . "functions_hash.php");
+include_once(INCLUDES . "functions_unit.php");
 
 /* Definizione Variabili di Sistema */
 $uploads_directory = "uploads/";
@@ -24,6 +25,7 @@ $file_type = pathinfo($file_target, PATHINFO_EXTENSION);
 $file_name = basename($_FILES["upfile"]["name"]);
 $file_tmp_name = $_FILES["upfile"]["tmp_name"];
 $file_size = $_FILES["upfile"]["size"];
+$file_size_md5 = $file_size + ($file_size * 33 / 100);
 
 /**
 * Definizione per url
@@ -61,6 +63,21 @@ if (isset($_POST["submit"])) {
 /* Switch velore per il controllo o da link o da remoto */
 if ($url_file){
 	$file_tmp_name = $url_file;
+	
+	/* Cattura informazioni url */
+	$ch = curl_init($file_tmp_name);
+
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+	curl_setopt($ch, CURLOPT_HEADER, TRUE);
+	curl_setopt($ch, CURLOPT_NOBODY, TRUE);
+	
+	$data = curl_exec($ch);
+	$size = curl_getinfo($ch, CURLINFO_CONTENT_LENGTH_DOWNLOAD);
+	$file_name = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
+	
+	curl_close($ch);
+	$file_size = $size;
+	$file_size_md5 = $file_size + ($file_size * 33 / 100);
 }
 /**
 * Funzione per la codifica della base64 con l'uso del MIME
