@@ -1,16 +1,62 @@
 div(class="container starter-form")
 	div(class="row")
 		div(class="col-md-12")
-			h2 Base64 Encode
+			h2.text-center Xir-Base64 Image Encoder Tool
+			h4.text-center Base64 Image Encoder Tool - Sir Xiradorn
+			hr
+			p.text-justify Xir-Base64 Image Encoder Tool è uno strumento per la conversione di immagini nel formato base64. Questa codifica vi permetterà di usare la vostra immagine senza bisogno di caricarla da qualche parte e o di storarla nella cache del browser. Verrà letta come se fosse semplicissimo testo e ricostruita. Puo essere usata nel vostro html o anche il css. Attenzione : questa procedura è adatta solo a file dimensioni adeguate. Immagini troppo grandi potrebbero causare problemi di dimensionamento e non essere elaborate dal server . Inoltre potrebbero sovraccaricare la vostra cache del browser che non risponderebbe correttamente.
+			
+			div(class="row")
+				div(class="col-md-2 text-center")
+					img(src="#{img1}", class="img-thumbnail")
+				div(class="col-md-2 text-center")
+					img(src="#{img2}", class="img-thumbnail")
+				div(class="col-md-2 text-center")
+					img(src="#{img3}", class="img-thumbnail")
+				div(class="col-md-2 text-center")
+					img(src="#{img4}", class="img-thumbnail")
+				div(class="col-md-2 text-center")
+					img(src="#{img5}", class="img-thumbnail")
+				div(class="col-md-2 text-center")
+					img(src="#{img6}", class="img-thumbnail")
+				
+			
+			p Qui sopra vi è stato mostrato qualche esempio di immagini rappresentate puramente con tale tecniche e che, ovviamente non sono state precaricare su questo o altri host di vario tipo.
 			form(method="post", action="convert.php", enctype="multipart/form-data", class="form-horizontal")
-				div(class="form-group")
-					label(for="user-file", class="control-label") File Upload
-					input(type="file", name="upfile", id="user-file")
-				div(class="form-group has-feedback")
-					label(for="user-url-file", class="control-label") File Url Upload
-					div(class="input-group")
-						span(class="input-group-addon") url:
-						input(type="text", name="file_url", id="user-url-file", class="form-control")
+				div(role="tabpanel")
+					ul(class="nav nav-tabs", role="tablist")
+						li(role="presentation", class="active")
+							a(href="#locale", aria-controls="locale", role="tab", data-toggle="tab") Xi-Form Caricamento Locale
+						li(role="presentation")
+							a(href="#urlext", aria-controls="urlext", role="tab", data-toggle="tab") Xi-Form Caricamento Url 
+					
+					div(class="tab-content")
+						div(role="tabpanel", class="tab-pane fade in active", id="locale")
+							div(class="row")
+								div(class="col-md-6")
+									div(class="form-group")
+										label(for="user-file", class="control-label") File Upload
+										input(type="file", name="upfile", id="user-file")
+										
+									div(class="form-group")
+										input(type="submit", value="Invia File", class="btn btn-primary btn-lg")
+								
+								div(class="col-md-6")
+									h1 Xiform - Caricamento Locale
+									p.text-justify La form in questione ti permette di effettuare il caricamento del file dal tuo pc. Attenzione non fare caricamenti troppo elevati in termini di peso altrimenti il server non riuscirà a portare a temine la tua richiesta
+						
+						div(role="tabpanel", class="tab-pane fade", id="urlext")
+							div(class="row")
+								div(class="col-md-6")
+									div(class="form-group has-feedback")
+										label(for="user-url-file", class="control-label") File Url Upload
+										div(class="input-group")
+											span(class="input-group-addon") url:
+											input(type="text", name="file_url", id="user-url-file", class="form-control")
+										
+										div(class="form-group")
+										input(type="submit", value="Invia Link", class="btn btn-primary btn-lg")
 
-				div(class="form-group")
-					input(type="submit", value="Invia", class="btn btn-primary btn-lg")
+								div(class="col-md-6")
+									h1 Xiform - Caricamento Url
+									p.text-justify La form in questione ti permette di effettuare il caricamento del file tramite il suo link. Attenzione non fare caricamenti troppo elevati in termini di peso altrimenti il server non riuscirà a portare a temine la tua richiesta
