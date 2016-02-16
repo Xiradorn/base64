@@ -5,3 +5,12 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.*)$ $1.php [NC,L]
 </IfModule>
+
+ExpiresActive On
+ExpiresByType image/gif       604800000
+ExpiresByType image/png       604800000
+ExpiresByType image/jpg       604800000
+ExpiresByType image/jpeg      604800000
+ExpiresByType text/html       604800000
+ExpiresByType text/javascript 604800000
+#ExpiresByType text/plain      604800000
